@@ -1,0 +1,94 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>心滿義竹</title>
+  <style>
+    body {
+      font-family: 標楷體;
+      background: rgb(224, 231, 221);
+      margin: 0;
+    }
+
+    .container {
+      margin: 0 auto;
+      background: white;
+      z-index: 1;
+      font-size: 20;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      height: 70px;
+      width: 100%;
+      align-items: center;
+    }
+
+    nav li {
+      padding: 10px 20px;
+      float: left;
+      left: 15%;
+      position: relative;
+      font-size: x-large;
+      border-right: 2px #7A918D solid;
+    }
+
+    nav li:hover {
+      background-color: #7A918D;
+      opacity: 0.5;
+    }
+
+    nav a {
+      padding: 0 10px;
+      color: rgb(82, 94, 76);
+    }
+  </style>
+</head>
+<script src="trip.js"></script>
+
+<body>
+  <div id="1">
+    <div class="container">
+      <div style="width: 250px;"></div>
+      <a href="首頁.html"><img src="PICTURE/義竹.png" height="50" style="
+          float: left;
+          padding: 10px 150px;" /></a>
+      <nav style="
+          float: left;
+          padding: 10px 150px;">
+        <ul style="
+            margin: 0;
+            list-style-type: none;">
+          <li>
+            <a href="首頁.html">首頁</a>
+          </li>
+          <li>
+            <a href="景點.html">景點</a>
+          </li>
+          <li>
+            <a href="美食.html">美食</a>
+          </li>
+          <li>
+            <a href="節慶.html">節慶</a>
+          </li>
+          <li>
+            <a href="行程.html">行程推薦</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div>
+      <img id="photo" style="position:absolute; display: block; width: 100%; height: 880;" src="PICTURE/000001.png">
+      <img style="z-index: 1; position:absolute; top: 105px; left: 305px;" src="PICTURE/transparent.png"
+        onclick="change1()" ;>
+      <img style="z-index: 1; position:absolute; top: 105px; left: 510px;" src="PICTURE/transparent.png"
+        onclick="change2()" ;>
+      <img style="z-index: 1; position:absolute; top: 105px; left: 705px;" src="PICTURE/transparent.png"
+        onclick="change3()" ;>
+    </div>
+</body>
+
+</html>

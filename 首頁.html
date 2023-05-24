@@ -1,0 +1,356 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>心滿義竹</title>
+  <script src="jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: 標楷體;
+      background: rgb(224, 231, 221);
+      margin: 0;
+    }
+
+    .container {
+      margin: 0 auto;
+      background: white;
+      z-index: 1;
+      font-size: 20;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      height: 70px;
+      width: 100%;
+      align-items: center;
+    }
+
+    nav li {
+      padding: 10px 20px;
+      float: left;
+      left: 15%;
+      position: relative;
+      font-size: x-large;
+      border-right: 2px #7A918D solid;
+    }
+
+    nav li:hover {
+      background-color: #7A918D;
+      opacity: 0.5;
+    }
+
+    nav a {
+      padding: 0 10px;
+      color: rgb(82, 94, 76);
+    }
+
+    .content {
+      clear: both;
+    }
+
+    .center {
+      justify-content: center;
+    }
+
+    .slider_container {
+      margin: 30px auto;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slider_container:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -100%;
+      opacity: 1;
+      filter: alpha(opacity=100);
+      width: 1200;
+      height: 700;
+      background-image: url(PICTURE/f4.png);
+      animation: bk 25s linear;
+    }
+
+    .slider_container div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 1;
+      filter: alpha(opacity=100);
+      left: 100%;
+      width: 100%;
+      -webkit-animation: round 25s linear infinite;
+      animation: round 25s linear infinite;
+    }
+
+    .slider_container div img {
+      width: 100%;
+    }
+
+    @keyframes round {
+      4% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        left: 0;
+        /* 0 - 1秒 滑入*/
+      }
+
+      20% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        left: 0;
+        /* 1- 5秒靜止*/
+      }
+
+      24% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        left: -100%;
+        /* 5-6秒滑出*/
+      }
+
+      26% {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        left: -100%;
+        /* 6-6.5秒變透明*/
+      }
+
+      28% {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        left: 100%;
+        /* 6.5-7秒回到起始位置*/
+      }
+    }
+
+    @keyframes bk {
+      0% {
+        left: 0;
+        /* 初始位置*/
+      }
+
+      4% {
+        left: -100%;
+        /* 0 - 1秒 滑出*/
+      }
+    }
+
+    .slider_container div:nth-child(5) {
+      -webkit-animation-delay: 0s;
+      animation-delay: 0s;
+    }
+
+    .slider_container div:nth-child(4) {
+      -webkit-animation-delay: 5s;
+      animation-delay: 5s;
+    }
+
+    .slider_container div:nth-child(3) {
+      -webkit-animation-delay: 10s;
+      animation-delay: 10s;
+    }
+
+    .slider_container div:nth-child(2) {
+      -webkit-animation-delay: 15s;
+      animation-delay: 15s;
+    }
+
+    .slider_container div:nth-child(1) {
+      -webkit-animation-delay: 20s;
+      animation-delay: 20s;
+    }
+
+    .rwd_slider_container_wrapper {
+      margin: 30px auto !important;
+      width: 1200px;
+    }
+
+    .rwd_slider_container {
+      position: relative;
+      display: block;
+      height: 0;
+      padding: 0;
+      overflow: hidden;
+      padding-bottom: 70%;
+      box-sizing: border-box;
+    }
+
+    .rwd_slider_container .slider_container {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .img1 {
+      display: none;
+      z-index: 1;
+      position: absolute;
+    }
+
+    .img2 {
+      display: none;
+      z-index: 1;
+      position: absolute;
+    }
+
+    .img3 {
+      display: none;
+      z-index: 1;
+      position: absolute;
+    }
+
+    .img4 {
+      display: none;
+      z-index: 1;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#1"><img src="PICTURE/top.png" style="height: 60px; position: fixed; right: 30;bottom: 50;"></a>
+  <div id="1">
+    <div class="container">
+      <div style="width: 250px;"></div>
+      <a href="首頁.html"><img src="PICTURE/義竹.png" height="50" style="
+      float: left;
+      padding: 10px 150px;" /></a>
+      <nav style="
+      float: left;
+      padding: 10px 150px;">
+        <ul style="
+        margin: 0;
+        list-style-type: none;">
+          <li>
+            <a href="首頁.html">首頁</a>
+          </li>
+          <li>
+            <a href="景點.html">景點</a>
+          </li>
+          <li>
+            <a href="美食.html">美食</a>
+          </li>
+          <li>
+            <a href="節慶.html">節慶</a>
+          </li>
+          <li>
+            <a href="行程.html">行程推薦</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div>
+      <img src="PICTURE/top0.jpg" ; width="100%" height="850px">
+    </div>
+
+    <br>
+    <br>
+    <div class="rwd_slider_container_wrapper">
+      <h1
+        style="width: 200px;text-align:center; border-bottom: 5px solid; padding-bottom: 10px; color: rgb(82, 94, 76);">
+        地區介紹
+      </h1>
+      <br>
+      <div class="rwd_slider_container">
+        <div class="slider_container">
+          <div>
+            <img src="PICTURE/f4.png" alt="pure css slider" width="1200" height="700" />
+          </div>
+          <div>
+            <img src="PICTURE/f3.png" alt="pure css slider" width="1200" height="700" />
+          </div>
+          <div>
+            <img src="PICTURE/f2.png" alt="pure css slider" width="1200" height="700" />
+          </div>
+          <div>
+            <img src="PICTURE/f1.png" alt="pure css slider" width="1200" height="700" />
+          </div>
+          <div>
+            <img src="PICTURE/f0.png" alt="pure css slider" width="1200" height="700" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr size="3px" color="black">
+
+
+    <div style="margin:0px auto; height: 800; width: 1200;">
+      <div style="height: 800; width: 600; float: left;">
+        <br>
+        <h1
+          style="width: 200px;text-align:center; border-bottom: 5px solid; padding-bottom: 10px; color: rgb(82, 94, 76);">
+          區域旅遊景點
+        </h1>
+        <br>
+        <br>
+        <br>
+        <img src="PICTURE/local1.jpg" height="500" style="z-index: -2; position:absolute;">
+
+        <img src="PICTURE/local1.jpg" height="500" class="img1" style="z-index: -2;">
+        <img src="PICTURE/local2.jpg" height="500" class="img2" style="z-index: -2;">
+        <img src="PICTURE/local3.jpg" height="500" class="img3" style="z-index: -2;">
+        <img src="PICTURE/local4.jpg" height="500" class="img4" style="z-index: -2;">
+
+      </div>
+      <div style="height: 800; width: 600; float: left;">
+        <img src="PICTURE/map.png" width="546" style="display:block; margin-top:50; margin-left:150;" usemap="#travel">
+        <map name="travel">
+          <area class="yizhu" shape="poly"
+            coords="300,220, 280,275,  265,282, 261,328, 236,343, 211,330, 126,445, 108,516, 123,573, 156,577, 151,558, 230,575, 300,475, 320,475, 372,437, 350,430, 380,408, 410,422, 426,384, 372,352, 373,314, 345,290, 359,257, 356,215, 330,217, 318,234"
+            href="景點.html#1">
+          <area class="budai" shape="poly"
+            coords="195,138, 204,142, 210,156, 235,172, 240,171, 237,221, 251,224, 264,230, 275,226, 286,219, 287,236, 280,271, 285,278, 270,283, 260,325, 238,339, 216,329, 201,345, 187,354, 190,364, 175,375, 156,384, 134,416, 109,441, 54,398, 66,390, 74,355, 65,344, 84,305, 84,279, 107,262, 124,236, 147,222, 156,238, 168,225, 183,231, 203,221, 206,172, 176,155, 185,148"
+            href="景點.html#2">
+          <area class="puzi" shape="poly"
+            coords="420,37, 411,45, 428,57, 433,80, 439,79, 441,83, 429,87, 436,130, 435,155, 430,157, 423,154, 419,161, 418,151, 410,144, 393,148, 388,150, 379,142, 367,149, 376,165, 374,198, 399,199, 419,193, 408,205, 407,214, 398,229, 391,231, 383,220, 376,229, 365,232, 366,258, 357,249, 362,225, 357,213, 327,215, 327,224, 317,226, 300,215, 292,225, 285,217, 268,222, 267,229, 252,221, 246,224, 237,208, 237,169, 229,170, 208,139, 255,105, 260,94, 267,102, 306,83, 331,93, 343,69, 354,69, 364,44, 380,35"
+            href="景點.html#3">
+          <area class="yanshui" shape="poly"
+            coords="426,405, 444,398, 449,414, 439,460, 450,465, 436,488, 420,499, 399,501, 383,492, 374,514, 393,518, 391,545, 378,546, 372,573, 374,590, 344,600, 314,591, 330,610, 319,624, 329,627, 333,644, 343,648, 338,675, 357,686, 331,690, 310,701, 284,704, 269,683, 253,678, 240,643, 173,660, 166,645, 172,631, 216,618, 217,585, 242,571, 295,479, 317,480, 358,461, 372,435, 353,427, 375,410, 392,423, 416,422"
+            href="景點.html#4">
+        </map>
+      </div>
+    </div>
+    <hr size="3px" color="black" width="100%">
+    <br>
+
+    <div style=" height: 900; width: 1200; margin: 0px auto;">
+      <h1
+        style="width: 200px;text-align:center; border-bottom: 5px solid; padding-bottom: 10px; color: rgb(82, 94, 76);">
+        宣傳影片
+      </h1>
+      <br>
+      <iframe width="1280" height="720" src="https://www.youtube.com/embed/kmmoclaDCQA" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+
+    <div style="height: 290px; background-color: rgb(82, 94, 76); padding: 0;">
+      <div style="width: 1200; margin: 0px auto;">
+        <br>
+        <p style="font-size: large; text-align: center; color: white;">單位&#58;嘉義大學資訊管理學系<br><br>
+          地址&#58;嘉義市新民路580號<br><br>
+          電話&#58;05-2732892</p>
+
+        <a href="https://yijhu.cyhg.gov.tw/"><img src="PICTURE/bt1.png" height="50" style="margin:10px 25PX;"></a>
+        <a href="https://budai.cyhg.gov.tw/"><img src="PICTURE/bt2.png" height="50" style="margin:10px 25PX;"></a>
+        <a href="https://puzi.cyhg.gov.tw/"><img src="PICTURE/bt3.png" height="50" style="margin:10px 25PX;"></a>
+        <a href="https://web.tainan.gov.tw/ysdo/"><img src="PICTURE/bt4.png" height="50" style="margin:10px 25PX;"></a>
+        <p style="font-size: large; text-align: center; color: white;">@2022 NCYU All Rights Reserved. Design by 心滿義竹</p>
+      </div>
+    </div>
+    <script src="map.js"></script>
+</body>
+
+</html>
